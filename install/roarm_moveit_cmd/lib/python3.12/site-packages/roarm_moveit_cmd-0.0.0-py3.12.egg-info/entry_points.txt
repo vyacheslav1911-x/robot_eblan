@@ -1,0 +1,2 @@
+[console_scripts]
+xyz_control = roarm_moveit_cmd.xyz_control:main

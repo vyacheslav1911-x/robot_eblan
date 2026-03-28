@@ -1,0 +1,29 @@
+[1.181s] Invoking command in '/home/v1/Desktop/Beizo/arm_ws/src/roarm_driver': CONDA_PROMPT_MODIFIER=(opencv) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/roarm_driver build --build-base /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/build install --record /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/install.log --single-version-externally-managed install_data
+[1.573s] running egg_info
+[1.607s] writing ../../build/roarm_driver/roarm_driver.egg-info/PKG-INFO
+[1.607s] writing dependency_links to ../../build/roarm_driver/roarm_driver.egg-info/dependency_links.txt
+[1.607s] writing entry points to ../../build/roarm_driver/roarm_driver.egg-info/entry_points.txt
+[1.607s] writing requirements to ../../build/roarm_driver/roarm_driver.egg-info/requires.txt
+[1.608s] writing top-level names to ../../build/roarm_driver/roarm_driver.egg-info/top_level.txt
+[1.678s] reading manifest file '../../build/roarm_driver/roarm_driver.egg-info/SOURCES.txt'
+[1.679s] writing manifest file '../../build/roarm_driver/roarm_driver.egg-info/SOURCES.txt'
+[1.679s] running build
+[1.680s] running build_py
+[1.680s] copying roarm_driver/roarm_driver.py -> /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/build/lib/roarm_driver
+[1.680s] running install
+[1.687s] running install_lib
+[1.724s] copying /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/build/lib/roarm_driver/roarm_driver.py -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages/roarm_driver
+[1.724s] byte-compiling /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages/roarm_driver/roarm_driver.py to roarm_driver.cpython-312.pyc
+[1.725s]   File "/home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages/roarm_driver/roarm_driver.py", line 22
+[1.725s]     except serial.SerialException as e:
+[1.725s]     ^^^^^^
+[1.725s] SyntaxError: invalid syntax
+[1.725s] 
+[1.725s] running install_data
+[1.726s] running install_egg_info
+[1.759s] removing '/home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages/roarm_driver-0.0.0-py3.12.egg-info' (and everything under it)
+[1.759s] Copying ../../build/roarm_driver/roarm_driver.egg-info to /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages/roarm_driver-0.0.0-py3.12.egg-info
+[1.761s] running install_scripts
+[1.967s] Installing roarm_driver script to /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/roarm_driver
+[1.968s] writing list of installed files to '/home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/install.log'
+[2.002s] Invoked command in '/home/v1/Desktop/Beizo/arm_ws/src/roarm_driver' returned '0': CONDA_PROMPT_MODIFIER=(opencv) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/roarm_driver build --build-base /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/build install --record /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/install.log --single-version-externally-managed install_data

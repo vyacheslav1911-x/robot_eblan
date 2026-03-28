@@ -1,0 +1,32 @@
+[1.631s] Invoking command in '/home/v1/Desktop/Beizo/arm_ws/src/roarm_driver': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/roarm_driver build --build-base /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/build install --record /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/install.log --single-version-externally-managed install_data
+[2.620s] running egg_info
+[2.621s] creating ../../build/roarm_driver/roarm_driver.egg-info
+[2.714s] writing ../../build/roarm_driver/roarm_driver.egg-info/PKG-INFO
+[2.715s] writing dependency_links to ../../build/roarm_driver/roarm_driver.egg-info/dependency_links.txt
+[2.716s] writing requirements to ../../build/roarm_driver/roarm_driver.egg-info/requires.txt
+[2.716s] writing top-level names to ../../build/roarm_driver/roarm_driver.egg-info/top_level.txt
+[2.717s] writing manifest file '../../build/roarm_driver/roarm_driver.egg-info/SOURCES.txt'
+[2.883s] reading manifest file '../../build/roarm_driver/roarm_driver.egg-info/SOURCES.txt'
+[2.884s] writing manifest file '../../build/roarm_driver/roarm_driver.egg-info/SOURCES.txt'
+[2.884s] running build
+[2.884s] running build_py
+[2.884s] creating /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/build
+[2.885s] creating /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/build/lib
+[2.885s] creating /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/build/lib/roarm_driver
+[2.885s] copying roarm_driver/__init__.py -> /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/build/lib/roarm_driver
+[2.885s] running install
+[2.895s] running install_lib
+[2.936s] creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages/roarm_driver
+[2.937s] copying /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/build/lib/roarm_driver/__init__.py -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages/roarm_driver
+[2.937s] byte-compiling /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages/roarm_driver/__init__.py to __init__.cpython-312.pyc
+[2.937s] running install_data
+[2.937s] creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/share/ament_index
+[2.937s] creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/share/ament_index/resource_index
+[2.938s] creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/share/ament_index/resource_index/packages
+[2.938s] copying resource/roarm_driver -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/share/ament_index/resource_index/packages
+[2.938s] copying package.xml -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/share/roarm_driver
+[2.938s] running install_egg_info
+[2.984s] Copying ../../build/roarm_driver/roarm_driver.egg-info to /home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages/roarm_driver-0.0.0-py3.12.egg-info
+[2.986s] running install_scripts
+[3.233s] writing list of installed files to '/home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/install.log'
+[3.295s] Invoked command in '/home/v1/Desktop/Beizo/arm_ws/src/roarm_driver' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/roarm_driver build --build-base /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/build install --record /home/v1/Desktop/Beizo/arm_ws/build/roarm_driver/install.log --single-version-externally-managed install_data

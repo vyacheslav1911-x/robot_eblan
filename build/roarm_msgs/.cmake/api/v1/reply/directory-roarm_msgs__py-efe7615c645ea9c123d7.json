@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "roarm_msgs__py",
+		"source" : "/home/v1/Desktop/Beizo/arm_ws/build/roarm_msgs/roarm_msgs__py"
+	}
+}

@@ -1,0 +1,1 @@
+moveit_ros_move_group;moveit_ros_visualization;moveit_kinematics;robot_state_publisher;joint_state_publisher;rviz2;xacro;roarm_description

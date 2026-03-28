@@ -1,0 +1,6 @@
+{
+  "package_name": "roarm_msgs",
+  "non_idl_tuples": [
+    "/home/v1/Desktop/Beizo/arm_ws/src/roarm_msgs:srv/MoveToXYZ.srv"
+  ]
+}

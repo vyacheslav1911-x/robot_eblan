@@ -1,0 +1,5 @@
+  File "/home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages/roarm_driver/roarm_driver.py", line 22
+    except serial.SerialException as e:
+    ^^^^^^
+SyntaxError: invalid syntax
+

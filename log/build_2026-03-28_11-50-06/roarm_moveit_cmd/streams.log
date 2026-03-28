@@ -1,0 +1,21 @@
+[1.271s] Invoking command in '/home/v1/Desktop/Beizo/arm_ws/src/roarm_moveit_cmd': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/roarm_moveit_cmd build --build-base /home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/build install --record /home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/install.log --single-version-externally-managed install_data
+[1.911s] running egg_info
+[1.988s] writing ../../build/roarm_moveit_cmd/roarm_moveit_cmd.egg-info/PKG-INFO
+[1.989s] writing dependency_links to ../../build/roarm_moveit_cmd/roarm_moveit_cmd.egg-info/dependency_links.txt
+[1.990s] writing entry points to ../../build/roarm_moveit_cmd/roarm_moveit_cmd.egg-info/entry_points.txt
+[1.990s] writing requirements to ../../build/roarm_moveit_cmd/roarm_moveit_cmd.egg-info/requires.txt
+[1.990s] writing top-level names to ../../build/roarm_moveit_cmd/roarm_moveit_cmd.egg-info/top_level.txt
+[2.156s] reading manifest file '../../build/roarm_moveit_cmd/roarm_moveit_cmd.egg-info/SOURCES.txt'
+[2.158s] writing manifest file '../../build/roarm_moveit_cmd/roarm_moveit_cmd.egg-info/SOURCES.txt'
+[2.158s] running build
+[2.159s] running build_py
+[2.159s] running install
+[2.176s] running install_lib
+[2.262s] running install_data
+[2.262s] running install_egg_info
+[2.345s] removing '/home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages/roarm_moveit_cmd-0.0.0-py3.12.egg-info' (and everything under it)
+[2.346s] Copying ../../build/roarm_moveit_cmd/roarm_moveit_cmd.egg-info to /home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages/roarm_moveit_cmd-0.0.0-py3.12.egg-info
+[2.352s] running install_scripts
+[2.850s] Installing xyz_control script to /home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/roarm_moveit_cmd
+[2.851s] writing list of installed files to '/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/install.log'
+[2.918s] Invoked command in '/home/v1/Desktop/Beizo/arm_ws/src/roarm_moveit_cmd' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/roarm_moveit_cmd build --build-base /home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/build install --record /home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/install.log --single-version-externally-managed install_data

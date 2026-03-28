@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="roarm_m3">
+    <xacro:include filename="$(find roarm_description)/urdf/roarm_m3/roarm_m3.xacro" />
+</robot>
