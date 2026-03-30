@@ -4,6 +4,10 @@ from rclpy.node import Node
 from rclpy.action import ActionClient
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
+from moveit_msgs.action import ExecuteTrajectory
+from moveit_msgs.srv import GetCartesianPath
+from geometry_msgs.msg import Pose
+import math
 from roarm_msgs.srv import MoveToXYZ
 from moveit_msgs.action import MoveGroup
 from moveit_msgs.srv import GetPositionIK
@@ -47,21 +51,35 @@ class MoveToXYZServer(Node):
         self.get_logger().info('Service /move_to_xyz ready')
 
     def solve_ik(self, x, y, z):
-        orientations = [
-            Quaternion(x=0.0, y=0.307, z=0.0, w=0.99),
-            Quaternion(x=0.0, y=1.0, z=0.0, w=0.0),
-            Quaternion(x=0.0, y=0.707, z=0.0, w=0.707),
-            
-            # Quaternion(x=0.0, y=0.0, z=0.0, w=1.0),
-        ]
+        pitch_values = [10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 0, 120, 150, 180]
 
-        for i, orientation in enumerate(orientations):
+        # Base angle — the base joint needs to point at the object
+        base_angle = math.atan2(2*y, x)
+
+        # Distance in horizontal plane — this is what the arm sees in its own plane
+        dist = math.sqrt(x * x + y * y)
+        link1_x = dist
+        link1_y = 0.0
+        link1_z = z
+
+        for pdeg in pitch_values:
+            pitch = math.radians(pdeg)
+
+            qw = math.cos(pitch / 2)
+            qx = 0.0
+            qy = math.sin(pitch / 2)
+            qz = 0.0
+
             ik_request = GetPositionIK.Request()
             ik_request.ik_request.group_name = 'hand'
             ik_request.ik_request.pose_stamped = PoseStamped()
-            ik_request.ik_request.pose_stamped.header.frame_id = 'world'
-            ik_request.ik_request.pose_stamped.pose.position = Point(x=x, y=y, z=z)
-            ik_request.ik_request.pose_stamped.pose.orientation = orientation
+            ik_request.ik_request.pose_stamped.header.frame_id = 'link1'
+            ik_request.ik_request.pose_stamped.pose.position = Point(
+                x=link1_x, y=link1_y, z=link1_z
+            )
+            ik_request.ik_request.pose_stamped.pose.orientation = Quaternion(
+                x=qx, y=qy, z=qz, w=qw
+            )
             ik_request.ik_request.avoid_collisions = True
 
             event = threading.Event()
@@ -71,10 +89,19 @@ class MoveToXYZServer(Node):
 
             result = future.result()
             if result.error_code.val == 1:
-                self.get_logger().info(f'IK solved with orientation attempt {i+1}')
+                self.get_logger().info(f'IK SOLVED: pitch={pdeg}° base={math.degrees(base_angle):.1f}°')
+
+                # Override the base joint with the correct angle
+                names = list(result.solution.joint_state.name)
+                positions = list(result.solution.joint_state.position)
+
+                base_idx = names.index('base_link_to_link1')
+                positions[base_idx] = base_angle
+
+                result.solution.joint_state.position = positions
                 return result
 
-            self.get_logger().warn(f'IK attempt {i+1} failed')
+            self.get_logger().warn(f'FAILED: pitch={pdeg}°')
 
         return result
 

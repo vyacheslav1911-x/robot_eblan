@@ -4,5 +4,3 @@ roarm_msgs.egg-info/PKG-INFO
 roarm_msgs.egg-info/SOURCES.txt
 roarm_msgs.egg-info/dependency_links.txt
 roarm_msgs.egg-info/top_level.txt
-roarm_msgs/srv/__init__.py
-roarm_msgs/srv/_move_to_xyz.py

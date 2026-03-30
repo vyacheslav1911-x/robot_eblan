@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "roarm_msgs/srv/detail/move_to_xyz__functions.h"
 #include "roarm_msgs/srv/detail/move_to_xyz__struct.h"
+#include "roarm_msgs/srv/detail/move_to_xyz__functions.h"
 #include "roarm_msgs/srv/detail/move_to_xyz__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

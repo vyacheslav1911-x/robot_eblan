@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-d1ac33e746244395a973.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "roarm_msgs__py",
+					"jsonFile" : "directory-roarm_msgs__py-efe7615c645ea9c123d7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/v1/Desktop/Beizo/arm_ws/build/roarm_msgs/roarm_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "roarm_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_roarm_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_roarm_msgs_egg-ccd2e08a3361c06e1a19.json",
+					"name" : "ament_cmake_python_build_roarm_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_roarm_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_roarm_msgs-35cc5ca40989ba925fe7.json",
+					"name" : "ament_cmake_python_copy_roarm_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs-c8c2195b34a3d0c5697b.json",
+					"name" : "roarm_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs__cpp-93e9b78d5e8e114107ab.json",
+					"name" : "roarm_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "roarm_msgs__py::@b6273abffb0cf755a96b",
+					"jsonFile" : "target-roarm_msgs__py-d86dc835472750a52d90.json",
+					"name" : "roarm_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs__rosidl_generator_c-da2a2ca0b2495f04527b.json",
+					"name" : "roarm_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs__rosidl_generator_py-f21834aaa5ac19c489b3.json",
+					"name" : "roarm_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs__rosidl_generator_type_description-e25b3f4f256af0bf8107.json",
+					"name" : "roarm_msgs__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs__rosidl_typesupport_c-d7615b5677e0db2623d7.json",
+					"name" : "roarm_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs__rosidl_typesupport_cpp-33ecda324d721a68d76d.json",
+					"name" : "roarm_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs__rosidl_typesupport_fastrtps_c-93298fc21e8a7cdc4447.json",
+					"name" : "roarm_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs__rosidl_typesupport_fastrtps_cpp-e1c8ffbbbb1f8f935e86.json",
+					"name" : "roarm_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs__rosidl_typesupport_introspection_c-2b9bf6e0099ce9fcc069.json",
+					"name" : "roarm_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs__rosidl_typesupport_introspection_cpp-13630c696d4f6168f37b.json",
+					"name" : "roarm_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs_s__rosidl_typesupport_c-b00a323000082e2e6591.json",
+					"name" : "roarm_msgs_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs_s__rosidl_typesupport_fastrtps_c-1ffbaa6436c665052a40.json",
+					"name" : "roarm_msgs_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs_s__rosidl_typesupport_introspection_c-2556c63ae214777b4e2a.json",
+					"name" : "roarm_msgs_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roarm_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roarm_msgs_uninstall-721565b880504218d144.json",
+					"name" : "roarm_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-84a99f8453356a24ec72.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/v1/Desktop/Beizo/arm_ws/build/roarm_msgs",
+		"source" : "/home/v1/Desktop/Beizo/arm_ws/src/roarm_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
