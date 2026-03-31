@@ -1,0 +1,17 @@
+[1.937s] Invoking command in '/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/build --no-deps symlink_data
+[2.479s] running develop
+[2.809s] running egg_info
+[2.841s] writing roarm_moveit_cmd.egg-info/PKG-INFO
+[2.842s] writing dependency_links to roarm_moveit_cmd.egg-info/dependency_links.txt
+[2.843s] writing entry points to roarm_moveit_cmd.egg-info/entry_points.txt
+[2.843s] writing requirements to roarm_moveit_cmd.egg-info/requires.txt
+[2.844s] writing top-level names to roarm_moveit_cmd.egg-info/top_level.txt
+[2.910s] reading manifest file 'roarm_moveit_cmd.egg-info/SOURCES.txt'
+[2.910s] writing manifest file 'roarm_moveit_cmd.egg-info/SOURCES.txt'
+[2.944s] running build_ext
+[2.944s] Creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages/roarm-moveit-cmd.egg-link (link to .)
+[2.945s] Installing xyz_control script to /home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/roarm_moveit_cmd
+[2.945s] 
+[2.945s] Installed /home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd
+[2.945s] running symlink_data
+[2.982s] Invoked command in '/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/build --no-deps symlink_data

@@ -1,0 +1,42 @@
+running develop
+running egg_info
+creating roarm_description.egg-info
+writing roarm_description.egg-info/PKG-INFO
+writing dependency_links to roarm_description.egg-info/dependency_links.txt
+writing requirements to roarm_description.egg-info/requires.txt
+writing top-level names to roarm_description.egg-info/top_level.txt
+writing manifest file 'roarm_description.egg-info/SOURCES.txt'
+reading manifest file 'roarm_description.egg-info/SOURCES.txt'
+writing manifest file 'roarm_description.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/lib/python3.12/site-packages/roarm-description.egg-link (link to .)
+
+Installed /home/v1/Desktop/Beizo/arm_ws/build/roarm_description
+running symlink_data
+creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/ament_index
+creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/ament_index/resource_index
+creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/ament_index/resource_index/packages
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/resource/roarm_description -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/ament_index/resource_index/packages
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/package.xml -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description
+creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/launch
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/launch/display.launch.py -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/launch
+creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/urdf
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/urdf/roarm_m3_moveit.xacro -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/urdf
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/urdf/roarm_m3_description.xacro -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/urdf
+creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/urdf/roarm_m3
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/urdf/roarm_m3/roarm_m3.xacro -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/urdf/roarm_m3
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/urdf/roarm_m3/roarm_m3.gazebo -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/urdf/roarm_m3
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/urdf/roarm_m3/roarm_m3.trans -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/urdf/roarm_m3
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/urdf/roarm_m3/materials.xacro -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/urdf/roarm_m3
+creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/meshes
+creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/meshes/roarm_m3
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/meshes/roarm_m3/link1.stl -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/meshes/roarm_m3
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/meshes/roarm_m3/link2.stl -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/meshes/roarm_m3
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/meshes/roarm_m3/link3.stl -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/meshes/roarm_m3
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/meshes/roarm_m3/base_link.stl -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/meshes/roarm_m3
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/meshes/roarm_m3/gripper_left_link.stl -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/meshes/roarm_m3
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/meshes/roarm_m3/link4.stl -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/meshes/roarm_m3
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/meshes/roarm_m3/gripper_link.stl -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/meshes/roarm_m3
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/meshes/roarm_m3/link5.stl -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/meshes/roarm_m3
+creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/rviz
+symbolically linking /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/rviz/view_description.rviz -> /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/share/roarm_description/rviz

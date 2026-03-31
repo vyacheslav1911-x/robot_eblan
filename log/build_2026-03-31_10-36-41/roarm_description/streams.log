@@ -1,0 +1,15 @@
+[1.750s] Invoking command in '/home/v1/Desktop/Beizo/arm_ws/build/roarm_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/v1/Desktop/Beizo/arm_ws/build/roarm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/v1/Desktop/Beizo/arm_ws/install/roarm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/build --no-deps symlink_data
+[2.772s] running develop
+[3.147s] running egg_info
+[3.184s] writing roarm_description.egg-info/PKG-INFO
+[3.184s] writing dependency_links to roarm_description.egg-info/dependency_links.txt
+[3.184s] writing requirements to roarm_description.egg-info/requires.txt
+[3.184s] writing top-level names to roarm_description.egg-info/top_level.txt
+[3.260s] reading manifest file 'roarm_description.egg-info/SOURCES.txt'
+[3.262s] writing manifest file 'roarm_description.egg-info/SOURCES.txt'
+[3.303s] running build_ext
+[3.303s] Creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/lib/python3.12/site-packages/roarm-description.egg-link (link to .)
+[3.304s] 
+[3.305s] Installed /home/v1/Desktop/Beizo/arm_ws/build/roarm_description
+[3.305s] running symlink_data
+[3.371s] Invoked command in '/home/v1/Desktop/Beizo/arm_ws/build/roarm_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/v1/Desktop/Beizo/arm_ws/build/roarm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/v1/Desktop/Beizo/arm_ws/install/roarm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/v1/Desktop/Beizo/arm_ws/build/roarm_description/build --no-deps symlink_data

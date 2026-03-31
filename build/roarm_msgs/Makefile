@@ -328,17 +328,17 @@ roarm_msgs__rosidl_typesupport_cpp/fast:
 .PHONY : roarm_msgs__rosidl_typesupport_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_copy_roarm_msgs
+# Target rules for targets named ament_cmake_python_symlink_roarm_msgs
 
 # Build rule for target.
-ament_cmake_python_copy_roarm_msgs: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_roarm_msgs
-.PHONY : ament_cmake_python_copy_roarm_msgs
+ament_cmake_python_symlink_roarm_msgs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_roarm_msgs
+.PHONY : ament_cmake_python_symlink_roarm_msgs
 
 # fast build rule for target.
-ament_cmake_python_copy_roarm_msgs/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_roarm_msgs.dir/build.make CMakeFiles/ament_cmake_python_copy_roarm_msgs.dir/build
-.PHONY : ament_cmake_python_copy_roarm_msgs/fast
+ament_cmake_python_symlink_roarm_msgs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_roarm_msgs.dir/build.make CMakeFiles/ament_cmake_python_symlink_roarm_msgs.dir/build
+.PHONY : ament_cmake_python_symlink_roarm_msgs/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_roarm_msgs_egg
@@ -744,7 +744,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_roarm_msgs_egg"
-	@echo "... ament_cmake_python_copy_roarm_msgs"
+	@echo "... ament_cmake_python_symlink_roarm_msgs"
 	@echo "... roarm_msgs"
 	@echo "... roarm_msgs__cpp"
 	@echo "... roarm_msgs__py"

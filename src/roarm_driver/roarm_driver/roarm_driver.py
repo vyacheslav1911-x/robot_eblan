@@ -37,7 +37,7 @@ class RoArmDriver(Node):
             'link2_to_link3': 0.0,
             'link3_to_link4': 0.0,
             'link4_to_link5': 0.0,
-            'link5_to_gripper_link': 1.5,
+            'link5_to_gripper_link':0.0,
             }
         self.joint_directions = {
             'base_link_to_link1': 1.0,
@@ -82,7 +82,7 @@ class RoArmDriver(Node):
                 changed = True
         if not changed:
             return 
-        cmd['spd'] = 10
+        cmd['spd'] = 100
         cmd['acc'] = 10
 
         cmd_str = json.dumps(cmd) + '\n'

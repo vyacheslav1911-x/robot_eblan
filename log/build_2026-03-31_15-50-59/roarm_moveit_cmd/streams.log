@@ -1,0 +1,17 @@
+[2.159s] Invoking command in '/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages:/home/v1/Desktop/Beizo/arm_ws/install/roarm_msgs/lib/python3.12/site-packages:/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd:/home/v1/Desktop/Beizo/arm_ws/build/roarm_driver:/home/v1/Desktop/Beizo/arm_ws/build/roarm_description:/home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages:/home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages:/home/v1/Desktop/Beizo/arm_ws/install/roarm_description/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/build --no-deps symlink_data
+[2.704s] running develop
+[3.051s] running egg_info
+[3.087s] writing roarm_moveit_cmd.egg-info/PKG-INFO
+[3.087s] writing dependency_links to roarm_moveit_cmd.egg-info/dependency_links.txt
+[3.087s] writing entry points to roarm_moveit_cmd.egg-info/entry_points.txt
+[3.088s] writing requirements to roarm_moveit_cmd.egg-info/requires.txt
+[3.088s] writing top-level names to roarm_moveit_cmd.egg-info/top_level.txt
+[3.158s] reading manifest file 'roarm_moveit_cmd.egg-info/SOURCES.txt'
+[3.158s] writing manifest file 'roarm_moveit_cmd.egg-info/SOURCES.txt'
+[3.197s] running build_ext
+[3.197s] Creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages/roarm-moveit-cmd.egg-link (link to .)
+[3.198s] Installing xyz_control script to /home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/roarm_moveit_cmd
+[3.198s] 
+[3.199s] Installed /home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd
+[3.199s] running symlink_data
+[3.240s] Invoked command in '/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages:/home/v1/Desktop/Beizo/arm_ws/install/roarm_msgs/lib/python3.12/site-packages:/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd:/home/v1/Desktop/Beizo/arm_ws/build/roarm_driver:/home/v1/Desktop/Beizo/arm_ws/build/roarm_description:/home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages:/home/v1/Desktop/Beizo/arm_ws/install/roarm_driver/lib/python3.12/site-packages:/home/v1/Desktop/Beizo/arm_ws/install/roarm_description/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd/build --no-deps symlink_data

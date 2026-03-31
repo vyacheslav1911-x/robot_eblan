@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing roarm_moveit_cmd.egg-info/PKG-INFO
+writing dependency_links to roarm_moveit_cmd.egg-info/dependency_links.txt
+writing entry points to roarm_moveit_cmd.egg-info/entry_points.txt
+writing requirements to roarm_moveit_cmd.egg-info/requires.txt
+writing top-level names to roarm_moveit_cmd.egg-info/top_level.txt
+reading manifest file 'roarm_moveit_cmd.egg-info/SOURCES.txt'
+writing manifest file 'roarm_moveit_cmd.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/python3.12/site-packages/roarm-moveit-cmd.egg-link (link to .)
+Installing xyz_control script to /home/v1/Desktop/Beizo/arm_ws/install/roarm_moveit_cmd/lib/roarm_moveit_cmd
+
+Installed /home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_cmd
+running symlink_data

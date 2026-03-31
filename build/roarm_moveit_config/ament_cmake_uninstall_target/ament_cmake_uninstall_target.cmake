@@ -55,3 +55,6 @@ endforeach()
 message(STATUS "Execute custom uninstall script")
 
 # begin of custom uninstall code
+
+# uninstall files installed using the symlink install functions
+include("/home/v1/Desktop/Beizo/arm_ws/build/roarm_moveit_config/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")

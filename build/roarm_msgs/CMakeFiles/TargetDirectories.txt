@@ -10,7 +10,7 @@
 /home/v1/Desktop/Beizo/arm_ws/build/roarm_msgs/CMakeFiles/roarm_msgs__rosidl_typesupport_fastrtps_cpp.dir
 /home/v1/Desktop/Beizo/arm_ws/build/roarm_msgs/CMakeFiles/roarm_msgs__rosidl_typesupport_introspection_cpp.dir
 /home/v1/Desktop/Beizo/arm_ws/build/roarm_msgs/CMakeFiles/roarm_msgs__rosidl_typesupport_cpp.dir
-/home/v1/Desktop/Beizo/arm_ws/build/roarm_msgs/CMakeFiles/ament_cmake_python_copy_roarm_msgs.dir
+/home/v1/Desktop/Beizo/arm_ws/build/roarm_msgs/CMakeFiles/ament_cmake_python_symlink_roarm_msgs.dir
 /home/v1/Desktop/Beizo/arm_ws/build/roarm_msgs/CMakeFiles/ament_cmake_python_build_roarm_msgs_egg.dir
 /home/v1/Desktop/Beizo/arm_ws/build/roarm_msgs/CMakeFiles/roarm_msgs__rosidl_generator_py.dir
 /home/v1/Desktop/Beizo/arm_ws/build/roarm_msgs/CMakeFiles/roarm_msgs_s__rosidl_typesupport_fastrtps_c.dir

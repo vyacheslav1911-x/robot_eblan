@@ -1,2 +1,0 @@
-[console_scripts]
-roarm_driver = roarm_driver.roarm_driver:main

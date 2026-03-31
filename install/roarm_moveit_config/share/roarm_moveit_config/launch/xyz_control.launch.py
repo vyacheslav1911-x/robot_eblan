@@ -1,12 +1,1 @@
-from launch import LaunchDescription
-from launch_ros.actions import Node
-
-
-def generate_launch_description():
-    return LaunchDescription([
-        Node(
-            package='roarm_moveit_cmd',
-            executable='xyz_control',
-            output='screen',
-        ),
-    ])
+/home/v1/Desktop/Beizo/arm_ws/src/roarm_moveit_config/launch/xyz_control.launch.py

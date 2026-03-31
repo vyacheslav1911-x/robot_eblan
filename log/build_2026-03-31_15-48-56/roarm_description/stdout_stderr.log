@@ -1,0 +1,13 @@
+running develop
+running egg_info
+writing roarm_description.egg-info/PKG-INFO
+writing dependency_links to roarm_description.egg-info/dependency_links.txt
+writing requirements to roarm_description.egg-info/requires.txt
+writing top-level names to roarm_description.egg-info/top_level.txt
+reading manifest file 'roarm_description.egg-info/SOURCES.txt'
+writing manifest file 'roarm_description.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/v1/Desktop/Beizo/arm_ws/install/roarm_description/lib/python3.12/site-packages/roarm-description.egg-link (link to .)
+
+Installed /home/v1/Desktop/Beizo/arm_ws/build/roarm_description
+running symlink_data

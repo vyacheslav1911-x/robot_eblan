@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import rclpy
+from control_msgs.action import GripperCommand
 from rclpy.node import Node
+# from tf2_ros import Buffer, TransformListener
 from rclpy.action import ActionClient
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
@@ -17,6 +19,7 @@ from moveit_msgs.msg import (
     JointConstraint,
     RobotState,
 )
+import time
 from geometry_msgs.msg import PoseStamped, Point, Quaternion
 import threading
 
@@ -24,6 +27,7 @@ import threading
 class MoveToXYZServer(Node):
     def __init__(self):
         super().__init__('xyz_control')
+        self.last_xyz = {'x': 0.0, 'y': 0.0, 'z': 0.0}
         self.cb_group = ReentrantCallbackGroup()
 
         self.move_action_client = ActionClient(
@@ -41,7 +45,38 @@ class MoveToXYZServer(Node):
             'compute_ik',
             callback_group=self.cb_group
         )
+        self.pick_srv= self.create_service(
+            MoveToXYZ,
+            'pick_sequential',
+            self.handle_pick_sequential,
+            callback_group=self.cb_group
+        )
+        self.get_logger().info('Service /pick_sequential ready')
+        # self.cartesian_client = self.create_client(
+        #     GetCartesianPath,
+        #     'compute_cartesian_path',
+        #     callback_group = self.cb_group
+        # )
+        # self.cartesian_client.wait_for_service()
 
+
+        self.gripper_client = ActionClient(
+            self,
+            GripperCommand,
+            '/gripper_controller/gripper_cmd',
+            callback_group=self.cb_group
+        )
+        self.gripper_client.wait_for_server()
+        self.get_logger().info('Connected to gripper controller')
+
+        # self.execute_client = ActionClient(
+        #     self,
+        #     ExecuteTrajectory,
+        #     'execute_trajectory',
+        #     callback_group=self.cb_group
+        # )
+        # self.execute_client.wait_for_server()
+    
         self.srv = self.create_service(
             MoveToXYZ,
             'move_to_xyz',
@@ -49,9 +84,133 @@ class MoveToXYZServer(Node):
             callback_group=self.cb_group
         )
         self.get_logger().info('Service /move_to_xyz ready')
+    def close_gripper(self):
+        goal = GripperCommand.Goal()
+        goal.command.position = 3.14    # swapped
+        goal.command.max_effort = 0.0
+        event = threading.Event()
+        future = self.gripper_client.send_goal_async(goal)
+        future.add_done_callback(lambda f: event.set())
+        event.wait()
+
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().error('Gripper goal rejected')
+            return False
+
+        event = threading.Event()
+        result_future = goal_handle.get_result_async()
+        result_future.add_done_callback(lambda f: event.set())
+        event.wait()
+
+        self.get_logger().info('Gripper closed')
+        return True
+
+    def open_gripper(self):
+        goal = GripperCommand.Goal()
+        goal.command.position = 1.5708   # swapped
+        goal.command.max_effort = 0.0
+
+        event = threading.Event()
+        future = self.gripper_client.send_goal_async(goal)
+        future.add_done_callback(lambda f: event.set())
+        event.wait()
+
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            return False
+
+        event = threading.Event()
+        result_future = goal_handle.get_result_async()
+        result_future.add_done_callback(lambda f: event.set())
+        event.wait()
+
+        self.get_logger().info('Gripper opened')
+        return True
+      
+    def handle_pick_sequential(self, request,response):
+        self.open_gripper()
+        obj_x, obj_y, obj_z = request.x, request.y, request.z
+        self.get_logger().info(f'Sequential pick: x={obj_x}, y={obj_y}, z={obj_z}')
+        base_angle = math.atan2(obj_y, obj_x)
+
+        dist = math.sqrt(obj_x*obj_x + obj_y*obj_y)
+        #rotatitng base to the object
+        safe_dist = 0.06  # 6cm from base, retracted
+        safe_x = safe_dist * math.cos(base_angle)
+        safe_y = safe_dist * math.sin(base_angle)
+        safe_z = 0.05 # safe height above ground
+        self.get_logger().info(f'Step 1: Rotating to face object (base={math.degrees(base_angle):.1f}°)')
+        step1_req = MoveToXYZ.Request()
+        step1_req.x = safe_x
+        step1_req.y = safe_y
+        step1_req.z = obj_z
+        step1_resp = MoveToXYZ.Response()
+        if abs(obj_y - self.last_xyz['y']) <= 0.025:
+            step1_req.z = obj_z
+        self.handle_move_request(step1_req, step1_resp)
+        time.sleep(0.4)
+        if not step1_resp.success:
+            response.success = False
+            response.message = ' Step 1 failed could not rotate'
+            return response
+        self.get_logger().info(f'Step 2: Moving to target ({obj_x}, {obj_y}, {obj_z})')
+        step2_req = MoveToXYZ.Request()
+        step2_req.x = obj_x
+        step2_req.y = obj_y
+        step2_req.z = obj_z
+        step2_resp = MoveToXYZ.Response()
+       
+        self.handle_move_request(step2_req, step2_resp)
+        self.close_gripper()
+        time.sleep(1)
+        if not step2_resp.success:
+            response.success = False
+            response.message = 'Step 2 failed: could not reach target'
+            return response
+
+        response.success = True
+        
+        #{x: -0.34, y: 0.02, z: 0.16}"
+        self.get_logger().info(f'Step 3: Moving to trash drop')
+        step3_req = MoveToXYZ.Request()
+        step3_req.x = -0.34
+        step3_req.y = 0.0
+        step3_req.z = 0.16
+        step3_resp = MoveToXYZ.Response()
+       
+        self.handle_move_request(step3_req, step3_resp)
+        if not step3_resp.success:
+            response.success = False
+            response.message = ' Step 3 failed could not drop'
+            return response
+        self.open_gripper()
+        time.sleep(0.5)
+        self.get_logger().info(f'Step 4: Moving to init')
+        step4_req = MoveToXYZ.Request()
+        step4_req.x = 0.05
+        step4_req.y = 0.0
+        step4_req.z = 0.06
+        step4_resp = MoveToXYZ.Response()
+       
+        self.handle_move_request(step4_req, step4_resp)
+        if not step3_resp.success:
+            response.success = False
+            response.message = ' Step 4 failed could not got to init'
+            return response
+        self.close_gripper()
+        
+        return response
+
+
+
+
+
+
+        
 
     def solve_ik(self, x, y, z):
-        pitch_values = [10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 0, 120, 150, 180]
+        pitch_values = [10,13,15,18 ,20, 30, 40, 50, 60, 70, 80, 85, 90, 0, 120, 150, 180]
 
         # Base angle — the base joint needs to point at the object
         base_angle = math.atan2(y, x)
@@ -73,7 +232,7 @@ class MoveToXYZServer(Node):
             ik_request = GetPositionIK.Request()
             ik_request.ik_request.group_name = 'hand'
             ik_request.ik_request.pose_stamped = PoseStamped()
-            ik_request.ik_request.pose_stamped.header.frame_id = 'link1'
+            ik_request.ik_request.pose_stamped.header.frame_id = 'world'
             ik_request.ik_request.pose_stamped.pose.position = Point(
                 x=link1_x, y=link1_y, z=link1_z
             )
@@ -104,7 +263,43 @@ class MoveToXYZServer(Node):
             self.get_logger().warn(f'FAILED: pitch={pdeg}°')
 
         return result
+    # def move_cartesian(self, waypoints):
+    #     req = GetCartesianPath.Request()
+    #     req.header.frame_id = 'world'
+    #     req.group_name = 'hand'
+    #     req.link_name = 'hand_tcp'
+    #     rew.waypoints = waypoints
+    #     req.max_step = 0.005
+    #     req.avoid_collisions = False
 
+    #     event = threading.Event()
+    #     future = self.cartesian_client.call_async(req)
+    #     future.add_done_callback(lambda f: event.set())
+    #     event.wait()
+
+    #     result = future.result()
+    #     if result.fraction < 0.9:
+    #         self.get_logger().error(f'Cartesian path only {result.fraction*100:.1f}% achieved')
+    #         return False
+    #     execute_goal = ExecuteTrajectory.Goal()
+    #     execute_goal.trajectory = result.solution
+
+    #     event = threading.Event()
+    #     future = self.execute_client.send_goal_async(execute_goal)
+    #     future.add_done_callback(lambda f: event.set())
+    #     event.wait()
+
+    #     goal_handle = future.result()
+    #     if not goal_handle.accepted:
+    #         return False
+
+    #     event = threading.Event()
+    #     result_future = goal_handle.get_result_async()
+    #     result_future.add_done_callback(lambda f: event.set())
+    #     event.wait()
+
+    #     return result_future.result().result.error_code.val == 1
+    
     def handle_move_request(self, request, response):
         self.get_logger().info(
             f'Received: x={request.x}, y={request.y}, z={request.z}'
