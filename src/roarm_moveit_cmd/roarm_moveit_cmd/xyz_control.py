@@ -163,7 +163,7 @@ class MoveToXYZServer(Node):
        
         self.handle_move_request(step2_req, step2_resp)
         self.close_gripper()
-        time.sleep(1)
+        time.sleep(0.5)
         if not step2_resp.success:
             response.success = False
             response.message = 'Step 2 failed: could not reach target'
